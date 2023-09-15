@@ -125,4 +125,30 @@ public class WordCRUD implements ICRUD {
             System.out.println("취소되었습니다.");
         }
     }
+
+    public void loadFile(){
+        try {
+            BufferedReader br = new BufferedReader(new FileReader(fName));
+            String line;
+            int count = 0;
+
+            while(true){
+                line = br.readLine();
+                if (line == null){
+                    break;
+                }
+                String data[] = line.split("\\|");
+                int level = Integer.parseInt(data[0]);
+                String word = data[1];
+                String meaning = data[2];
+                list.add(new Word(0, level, word, meaning));
+                count++;
+            }
+            br.close();
+            System.out.println(("==> " + count + "개 로딩 완료!!!\n"));
+        } catch (IOException e) {
+            e.printStackTrace();
+        }
+    }
+
 }
