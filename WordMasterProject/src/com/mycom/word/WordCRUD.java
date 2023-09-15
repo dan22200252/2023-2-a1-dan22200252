@@ -55,6 +55,21 @@ public class WordCRUD implements ICRUD {
         System.out.println("--------------------------------\n");
     }
 
+    public void listAll(int level) {
+        int j = 0;
+        System.out.print("\n--------------------------------\n");
+        for (int i = 0; i < list.size(); i++) {
+            int ilevel = list.get(i).getLevel();
+            if (ilevel != level) {
+                continue;
+            }
+            System.out.print((j + 1) + " ");
+            System.out.println(list.get(i).toString());
+            j++;
+        }
+        System.out.println("--------------------------------\n");
+    }
+
     public ArrayList<Integer> listAll(String keyword) {
         ArrayList<Integer> idList = new ArrayList<>();
         int j = 0;
