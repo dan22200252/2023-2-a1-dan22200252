@@ -7,5 +7,6 @@ public class Main {
         WordManager wordManager = new WordManager();
 
         wordManager.start();
+
     }
 }
