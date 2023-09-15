@@ -151,4 +151,17 @@ public class WordCRUD implements ICRUD {
         }
     }
 
+    public void saveItem() {
+        try{
+            PrintWriter pr = new PrintWriter(new FileWriter("Test.txt"));
+            for (Word one : list){
+                pr.write(one.toString() + "\n");
+            }
+            pr.close();
+            System.out.println("\n모든 단어 파일 저장 완료 !!!\n");
+        }
+        catch (IOException e){
+            e.printStackTrace();
+        }
+    }
 }
