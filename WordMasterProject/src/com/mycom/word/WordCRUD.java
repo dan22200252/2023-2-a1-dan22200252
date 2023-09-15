@@ -6,7 +6,7 @@ import java.util.*;
 public class WordCRUD implements ICRUD {
     ArrayList<Word> list;
     Scanner s;
-    final String fName = "Dictionary.txt";
+    final String fname = "Dictionary.txt";
 
     WordCRUD(Scanner s) {
         list = new ArrayList<>();
@@ -128,7 +128,7 @@ public class WordCRUD implements ICRUD {
 
     public void loadFile(){
         try {
-            BufferedReader br = new BufferedReader(new FileReader(fName));
+            BufferedReader br = new BufferedReader(new FileReader(fname));
             String line;
             int count = 0;
 
@@ -151,7 +151,7 @@ public class WordCRUD implements ICRUD {
         }
     }
 
-    public void saveItem() {
+    public void saveFile() {
         try{
             PrintWriter pr = new PrintWriter(new FileWriter("Test.txt"));
             for (Word one : list){
