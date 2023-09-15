@@ -1,4 +1,4 @@
-*** superintendent 관리자
+*** superintendent 관리자, 감독관
 *         electric 전기의, 전기를 생산하는
 **       equipment 장비, 용품
 *             pole 기둥, 장대
